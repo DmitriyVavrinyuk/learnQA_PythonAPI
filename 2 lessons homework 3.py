@@ -14,7 +14,7 @@ for i in method:
     r.status
     # print(r)
     print(f'request method type = {i} status is {r.status} data {r.data} ')
-    print("\n")
+    # print("\n")
 
 
 
