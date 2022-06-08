@@ -1,6 +1,8 @@
 import time
 import requests
 
+#Ex8: Токены
+
 my_url = "https://playground.learnqa.ru/ajax/api/longtime_job"
 
 response = requests.get(my_url)
