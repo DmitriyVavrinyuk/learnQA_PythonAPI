@@ -9,13 +9,27 @@ method = ["get", "post", "delete", "put", "options", "patch", "head", "trace"]
 http = urllib3.PoolManager()
 # payload = {"name": "User"}
 
-for i in method:
-    r = http.request(i, 'https://playground.learnqa.ru/ajax/api/compare_query_type')
-    r.status
-    # print(r)
-    print(f'request method type = {i} status is {r.status} data {r.data} ')
-    # print("\n")
+# r_test = http.request("Get", 'https://playground.learnqa.ru/ajax/api/compare_query_type')
+# print(r_test.status)
+# print(r_test.data)
+# print(r_test.headers)
 
+params = {"param": "value"}
+data = {"param": "number"}
+fields = {}
+
+for i in method:
+    if i == "get":
+        fields = params
+    else:
+        fields = data
+    r = http.request(i, 'https://playground.learnqa.ru/ajax/api/compare_query_type', fields)
+#     r.status
+#     print(r)
+#     print(r.data)
+
+    print(f'request method type = {i} status is {r.status} data {r.data} and its param = {fields}')
+#     # print("\n")
 
 
 
