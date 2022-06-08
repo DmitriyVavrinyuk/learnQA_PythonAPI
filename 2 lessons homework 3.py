@@ -23,11 +23,9 @@ for i in method:
         fields = params
     else:
         fields = data
-    r = http.request(i, 'https://playground.learnqa.ru/ajax/api/compare_query_type', fields)
-#     r.status
-#     print(r)
-#     print(r.data)
 
+    r = http.request(i, 'https://playground.learnqa.ru/ajax/api/compare_query_type', fields)
+    r.status
     print(f'request method type = {i} status is {r.status} data {r.data} and its param = {fields}')
 #     # print("\n")
 
