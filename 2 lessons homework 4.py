@@ -1,18 +1,9 @@
 import time
-from json.decoder import JSONDecodeError
 import requests
-import json
-import urllib3
 
 my_url = "https://playground.learnqa.ru/ajax/api/longtime_job"
-# headers = {'Authorization': 'my_Token'}
-# cookies = {'session': 'cookies'}
-
 
 response = requests.get(my_url)
-# cookie_value = response.cookies.get('token')
-# print(cookie_value)
-# print(response.text)
 
 parsed_response_text = response.json()
 my_Token = parsed_response_text["token"]
